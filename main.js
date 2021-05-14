@@ -7,6 +7,7 @@ player_x = 10;
 player_y = 10;
 
 var player_object = "";
+var player_image = "";
 
 function player_upadate()
 {

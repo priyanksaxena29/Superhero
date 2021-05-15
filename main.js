@@ -11,7 +11,7 @@ var player_image = "";
 
 function player_upadate()
 {
-    fabric.Image.fromURL("player.png", function(Img)
+    fabric.Image.fromURL("https://postimg.cc/Mnhm6g03", function(Img)
     {
         player_object = Img;
 
@@ -25,7 +25,7 @@ function player_upadate()
     });
 }
 
-fabric.Image.fromURL("player.png", function(Img) {
+fabric.Image.fromURL("https://postimg.cc/Mnhm6g03", function(Img) {
     function new_image(get_image)
     {
         fabric.Image.fromURL(get_image, function(Img) {

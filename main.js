@@ -61,8 +61,8 @@ function my_keydown(e)
       console.log("shift and m is pressed together");
       block_image_width = block_image_width - 10;
       block_image_height = block_image_height - 10;
-      document.getElementById("current_width").inmerHTML = block_image_width;
-      document.getelementById("current_height").innerHTML = block_image_height; 
+      document.getElementById("current_width").innerHTML = block_image_width;
+      document.getElementById("current_height").innerHTML = block_image_height; 
     }
 
     if ('38' == KeyPressed )

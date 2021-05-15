@@ -1,7 +1,7 @@
 var canvas = new fabric.Canvas('myCanvas');
 
-block_img_width = 30;
-block_img_height = 30;
+block_image_width = 30;
+block_image_height = 30;
 
 player_x = 10;
 player_y = 10;
@@ -11,7 +11,7 @@ var player_image = "";
 
 function player_upadate()
 {
-    fabric.Image.fromURL("https://postimg.cc/Mnhm6g03", function(Img)
+    fabric.Image.fromURL("https://postimg.cc/ns3qHXnH", function(Img)
     {
         player_object = Img;
 
@@ -41,3 +41,73 @@ fabric.Image.fromURL("https://postimg.cc/Mnhm6g03", function(Img) {
         })
     }
 })
+
+window.addEventListener("keypress", my_keydown);
+
+function my_keydown(e)
+{
+    KeyPressed = e.keyCode;
+    console.log(KeyPressed);
+    if (e.shiftKey == true && KeyPressed == '80')
+    {
+        console.log("shift and p is pressed together")
+        block_image_width = block_image_width + 10;
+        block_image_height = block_image_height + 10;
+        document.getElementById("current_width").innerHTML = block_image_width;
+        document.getElementById("current_height").innerHTML = block_image_height;
+    }
+    if (e.shiftKey == true && KeyPressed == '77')
+    {
+      console.log("shift and m is pressed together");
+      block_image_width = block_image_width - 10;
+      block_image_height = block_image_height - 10;
+      document.getElementById("current_width").inmerHTML = block_image_width;
+      document.getelementById("current_height").innerHTML = block_image_height; 
+    }
+
+    if ('38' == KeyPressed )
+    {
+        up();
+        console.log("up")
+    }
+    if ('40'  == KeyPressed )
+    {
+        down();
+        console.log("down")
+    }
+    if ('37'  == KeyPressed )
+    {
+        left();
+        console.log("left")
+    }
+    if ('39' == KeyPressed )
+    {
+        right();
+        console.log("right")
+    }
+    if ('70'  == KeyPressed )
+    {
+        new_image('ironman_face.png');
+        console.log("f");
+    }
+    if ('66'  == KeyPressed )
+    {
+        new_image('spider_body.png');
+        console.log("b");
+    }
+    if ('76'  == KeyPressed )
+    {
+        new_image('hulk_legs.png');
+        console.log("l");
+    }
+    if ('82'  == KeyPressed )
+    {
+        new_image('thor_right_hand.png');
+        console.log("r");
+    }
+    if ('72'  == KeyPressed )
+    {
+        new_image('captain_america_left_hand.png');
+        console.log("h");
+    }
+}

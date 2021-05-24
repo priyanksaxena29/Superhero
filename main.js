@@ -8,7 +8,7 @@ player_y = 10;
 
 var player_object = "";
 
-function player_upadate()
+function player_update()
 {
     fabric.Image.fromURL("player.png", function(Img)
     {
@@ -89,7 +89,7 @@ function my_keydown(e)
     }
     if ('66'  == keyPressed )
     {
-        new_image('spider_body.png');
+        new_image('spiderman_body.png');
         console.log("b");
     }
     if ('76'  == keyPressed )
@@ -106,5 +106,55 @@ function my_keydown(e)
     {
         new_image('captain_america_left_hand.png');
         console.log("h");
+    }
+}
+
+
+
+function up()
+{
+    if (player_y >=0)
+    {
+        player_y = player_y - block_image_height;
+        console.log("block image height = " + block_image_height);
+        console.log("When up arrow key is pressed, X = " + player_x + ", Y =" + player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+
+function down()
+{
+    if (player_y <=500)
+    {
+        player_y = player_y + block_image_height;
+        console.log("block image height = " + block_image_height);
+        console.log("When down arrow key is pressed, X = " + player_x + ", Y =" + player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+
+function left()
+{
+    if (player_x >=0)
+    {
+        player_x = player_x - block_image_width;
+        console.log("block image width = " + block_image_width);
+        console.log("When left arrow key is pressed, X = " + player_x + ", Y =" + player_y);
+        canvas.remove(player_object);
+        player_update();
+    }
+}
+
+function right()
+{
+    if (player_x <=850)
+    {
+        player_x = player_x + block_image_width;
+        console.log("block image width = " + block_image_width);
+        console.log("When left arrow key is pressed, X = " + player_x + ", Y =" + player_y);
+        canvas.remove(player_object);
+        player_update();
     }
 }
